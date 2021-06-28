@@ -182,9 +182,9 @@
 	<br><br><br><br><br><br><br><br><br><br><br><br>
 	<body onload="go()" class="bg">
 		<script>
-			window.applicationCache.ondownloading=function(){document.getElementById("progress").innerHTML="Instalando Cache Offline... <font color=\"white\"> Espere!</font>";localStorage.isCached=false;};
+			window.applicationCache.ondownloading=function(){document.getElementById("progress").innerHTML="Instalando Caché Offline... <font color=\"white\"> Espere!</font>";localStorage.isCached=false;};
 			window.applicationCache.onprogress=function(a){document.getElementById("myBar").style.width=(Math.round(100*(a.loaded/a.total)))+"%";document.getElementById("myBar").innerHTML=(Math.round(100*(a.loaded/a.total)))+"%";};
-			window.applicationCache.oncached=function(){document.getElementById("progress").innerHTML="Cache <font color=\"white\">instalada</font> con éxito!";localStorage.isCached=true;setTimeout(function(){document.getElementById("progress").innerHTML="Salga presionando el botón <font color=\"white\">PS, desactive la conexión a internet</font> y vuelva para cargar el pirateo."; }, 2600);};
+			window.applicationCache.oncached=function(){document.getElementById("progress").innerHTML="Caché <font color=\"white\">instalada</font> con éxito!";localStorage.isCached=true;setTimeout(function(){document.getElementById("progress").innerHTML="Salga presionando el botón <font color=\"white\">PS, desactive la conexión a internet</font> y vuelva para cargar el pirateo."; }, 2600);};
 		</script>
 		<script>
 			var width = 0;
@@ -220,7 +220,7 @@
 		
 		function done(){
 			document.getElementById("myProgress").remove();
-			document.getElementById("progress").innerHTML="Carga del Pirateo Exitosa! Lanzando el GoldHen 1.1...  Un momento ,Por favor, <font color=\"white\">Espere!</font>";
+			document.getElementById("progress").innerHTML="Carga del Pirateo Exitosa! Lanzando el GoldHen 1.1... Un momento ,Por favor <font color=\"white\">Espere!</font>";
 			preloadScripts(['preloader.js', 'goldhen11.js', 'loader.js']);
 
 			if(window.postPayload)
@@ -238,7 +238,7 @@
 			setTimeout(function()
 			{	
 				eval.call(window, scriptCode);
-				if(main_ret == 0 || main_ret == 179) {done();}else{alert("Oh no!! El Pirateo a fallado,Intente Reiniciar, utilizando el botón \"PS\" \luego intente cargarlo de nuevo.");}
+				if(main_ret == 0 || main_ret == 179) {done();}else{alert("Oh no!! El Pirateo a fallado. Intente reiniciar utilizando el botón \"PS\" \luego intente cargarlo de nuevo.");}
 			}, 100);
 
 		};
